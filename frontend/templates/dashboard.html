@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family: 'Inter', sans-serif;
+    background:#f4f6fb;
+    margin:0;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    margin:0;
+    font-size:14px;
+    color:#666;
+}
+
+.valor{
+    font-size:28px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Dashboard</h1>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Dinero ganado</h3>
+<div class="valor">$ <span id="numero">0</span></div>
+</div>
+<div class="card">
+    <h3>Fecha ingreso ultima moneda</h3>
+    <div class="valor"><span id="ti">0</span></div>
+</div>
+<div class="card">
+<h3>CPU</h3>
+<div class="valor"><span id="cpu">0</span></div>
+</div>
+<div class="card">
+    <h3>Memoria usada</h3>
+    <div class="valor"><span id="RAM">0</span> GB</div>
+</div>
+<div class="card">
+<h3>Tiempo encendido</h3>
+<div class="valor"><span id="EN">0</span></div>
+</div>
+
+
+
+
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
